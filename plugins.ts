@@ -10,6 +10,7 @@ import pagefind from "lume/plugins/pagefind.ts";
 import sitemap from "lume/plugins/sitemap.ts";
 import readingTime from "https://raw.githubusercontent.com/lumeland/experimental-plugins/main/reading_time/mod.ts";
 import toc from "https://deno.land/x/lume_markdown_plugins@v0.1.0/toc/mod.ts";
+import ja from "npm:date-fns/locale/ja/index.js";
 
 import type { Page, Site } from "lume/core.ts";
 
@@ -25,7 +26,9 @@ export default function (options: Options = {}) {
       .use(basePath())
       .use(prism(options.prism))
       .use(readingTime())
-      .use(date())
+      .use(date({
+        locales: { ja },
+      }))
       .use(metas())
       .use(resolveUrls())
       .use(slugifyUrls())
