@@ -29,7 +29,7 @@ export default function (options: Options = {}) {
       .use(metas())
       .use(resolveUrls())
       .use(slugifyUrls())
-      .use(pagefind())
+      .use(pagefind({ binary: { version: "v0.10.7" } })) // fix issue https://github.com/lumeland/lume/issues/362#issuecomment-1396404347
       .use(terser())
       .use(sitemap())
       .copy("fonts")
