@@ -4,11 +4,25 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title or metas.title }} - {{ metas.site }}</title>
+    <title>{{ title or metas.title }}</title>
 
     <meta name="supported-color-schemes" content="light dark">
     <meta name="theme-color" content="hsl(220, 20%, 100%)" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="hsl(220, 20%, 10%)" media="(prefers-color-scheme: dark)">
+
+    <script src="/main.js" type="module"></script>
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ metas.title }}">
+    <meta property="og:url" content="{{ metas.url | url(true) }}">
+    <meta property="og:description" content="{{ metas.description | md(true) | striptags }}">
+    <meta property="og:image" content="{{ metas.ogp | url(true) }}">
+
+    <meta name="twitter:title" content="{{ metas.title }}">
+    <meta name="twitter:description" content="{{ metas.description | md(true) | striptags }}">
+    <meta name="twitter:site" content="@uta8a">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="{{ metas.ogp | url(true) }}">
     
     <link rel="stylesheet" href="/styles.css">
     <link rel="alternate" href="/feed.xml" type="application/atom+xml" title="{{ metas.site }}">
