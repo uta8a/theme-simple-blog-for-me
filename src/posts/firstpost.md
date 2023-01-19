@@ -1,13 +1,6 @@
 ---
 title: This is my first post
 date: 2018-08-23T10:10:10
-author: Óscar Otero
-tags:
-  - Placeholder
-  - Example
-  - Lorem ipsum
-  - JavaScript
-  - TypeScript
 ---
 
 Leverage agile frameworks to provide a robust synopsis for high level overviews.

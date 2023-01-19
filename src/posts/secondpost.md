@@ -1,10 +1,6 @@
 ---
 title: This is my second post
 date: 2018-08-23T10:10:20
-author: Óscar Otero
-tags:
-  - Placeholder
-  - Example
 ---
 
 Leverage agile frameworks to provide a robust synopsis for high level overviews.

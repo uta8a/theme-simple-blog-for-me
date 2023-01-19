@@ -1,13 +1,4 @@
 <div class="post-details">
-  {% if author %}
-    {% set page = search.page("type=author author='" + author + "'") %}
-    {% if page %}
-      <p>By <a data-pagefind-filter="author" href="{{ page.data.url }}">{{ author }}</a></p>
-    {% else %}
-      <p>By {{ author }}</p>
-    {% endif %}
-  {% endif %}
-
   <p>
     <time datetime="{{ date | date('DATETIME') }}">
       {{ date | date('HUMAN_DATE') }}

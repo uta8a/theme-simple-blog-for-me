@@ -1,9 +1,6 @@
 ---
 title: How to install this theme
 date: 2022-06-12
-author: Óscar Otero
-tags:
-  - Instructions
 ---
 
 **Simple blog** is a clean and minimal blog theme for Lume, with support for
