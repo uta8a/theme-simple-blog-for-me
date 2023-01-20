@@ -36,10 +36,7 @@ export default function (options: Options = {}) {
       .use(terser())
       .use(sitemap())
       .copy("fonts")
-      .copy("favicon.png")
-      .preprocess([".md"], (page: Page) => {
-        page.data.excerpt = page.data.description;
-      });
+      .copy("favicon.png");
 
     // Highlight.js stylesheet
     site.remoteFile(
